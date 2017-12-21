@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/index.js',
-    vendor: ['core-js/fn/map', 'core-js/fn/set', 'raf/polyfill', 'axios', 'moment', 'react', 'react-dom']
+    vendor: ['core-js/fn/map', 'core-js/fn/set', 'core-js/fn/promise','raf/polyfill', 'axios', 'moment', 'react', 'react-dom']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
