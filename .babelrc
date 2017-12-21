@@ -1,0 +1,9 @@
+{
+  "presets": ["env", "stage-0", "react"],
+  "plugins":[
+  	["import", { "libraryName": "antd", "style": true }],
+  	"transform-object-rest-spread",
+    "transform-decorators-legacy",
+    "transform-runtime"
+  ]
+}
