@@ -12,7 +12,7 @@ app.get('/data/monitorData.do', (req, res) => {
     promises.push(eq.findOne({}, null, {sort: {'_id': -1}}).exec());
   })
   Promise.all([...promises]).then((data) => {
-    data.filter(item => item); // 确保数据存在
+    const data =  data.filter(item => item); // 确保数据存在
     res.json({
       status: 1,
       data: data,
