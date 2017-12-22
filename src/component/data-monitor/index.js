@@ -22,7 +22,7 @@ class DataMonitor extends React.Component {
     fetchData({url: '/data/monitorData.do'}).then((data) => {
       data.forEach((item, index) => { // 数据需要的key值
         item.key = index;
-        item.updateTime = moment(+item.updateTime).format('YYYY-MM-DD hh:mm:ss');
+        item.updateTime = moment(+item.updateTime).format('YYYY-MM-DD HH:mm:ss');
       });
       this.setState({
         data: data,
