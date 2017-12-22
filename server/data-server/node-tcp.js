@@ -1,6 +1,6 @@
 var net = require('net')    //引入网络模块
 const equipment = require('./mongoose');
-var HOST = '127.0.0.1';     //定义服务器地址
+var HOST = '10.110.140.119';     //定义服务器地址
 var PORT = 9000;            //定义端口号
 console.info('Server is running on port ' + PORT);
 //创建TCP服务器
