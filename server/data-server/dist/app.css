@@ -20988,7 +20988,8 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
     padding: 0;
     opacity: 0;
   }
-}.report table {
+}/*表格样式修正*/
+.report table {
   border: 1px solid #ccc !important;
 }
 .ant-table-thead > tr > th {
