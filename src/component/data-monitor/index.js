@@ -2,6 +2,7 @@ import React from 'react';
 import DataTable from './table';
 import fetchData from '../../util/fetch-data';
 import {Button} from 'antd';
+import moment from 'moment';
 
 class DataMonitor extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class DataMonitor extends React.Component {
     fetchData({url: '/data/monitorData.do'}).then((data) => {
       data.forEach((item, index) => { // 数据需要的key值
         item.key = index;
+        item.updateTime = moment(+item.updateTime).format('YYYY-MM-DD hh:mm:ss');
       });
       this.setState({
         data: data,
