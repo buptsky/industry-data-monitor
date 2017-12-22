@@ -1,5 +1,5 @@
 @import '~antd/dist/antd.css';
-
+/*表格样式修正*/
 .report table {
   border: 1px solid #ccc !important;
 }

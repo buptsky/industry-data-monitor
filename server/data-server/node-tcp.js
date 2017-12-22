@@ -10,8 +10,12 @@ var server = net.createServer(function(socket) {
   //监听数据接收事件
   socket.on('data', function(data) {
     // 传过来的数据以空格分割
-    const formatData = data.toString().split(' ');
-    if (formatData.length !== 7) return; // 数据不足先返回
+    const formatData = data.toString().split(/\s+/);
+    console.log(formatData);
+    if (formatData.length !== 7) {
+      socket.write('data illegal: should be "eqNo interval data1 data2 data3 data4 data5"');
+      return;
+    }; // 数据不足先返回
     const eqNo = formatData[0];
     const interval = formatData[1];
     console.log(eqNo);
@@ -29,13 +33,13 @@ var server = net.createServer(function(socket) {
         }, function (err, doc) {
           if (!err) {
             console.log(doc);
+            socket.write('data receive success');
           } else {
             console.log(err);
           }
         })
       }
     });
-    socket.write('Hello Client!');
   });
   //监听连接断开事件
   socket.on('end', function() {
