@@ -7,18 +7,18 @@ console.info('Server is running on port ' + PORT);
 var server = net.createServer(function(socket) {
   var client = socket.remoteAddress + ':' + socket.remotePort;
   console.log('Connected to ' + client);
-  //监听数据接收事件
+  //监听数据接收事件,防止客户端秒断，不返回消息
   socket.on('data', function(data) {
     // 传过来的数据以空格分割
     const formatData = data.toString().split(/\s+/);
-    console.log(formatData);
+    // console.log(formatData);
     if (formatData.length !== 7) {
-      socket.write('data illegal: should be "eqNo interval data1 data2 data3 data4 data5"');
+      // socket.write('data illegal: should be "eqNo interval data1 data2 data3 data4 data5"');
       return;
     }; // 数据不足先返回
     const eqNo = formatData[0];
     const interval = formatData[1];
-    console.log(eqNo);
+    // console.log(eqNo);
     equipment.forEach((item) => {
       if (item.modelName === eqNo) { // 数据表名与设备号相同
         item.create({
@@ -32,8 +32,8 @@ var server = net.createServer(function(socket) {
           data5: +formatData[6] || 0
         }, function (err, doc) {
           if (!err) {
-            console.log(doc);
-            socket.write('data receive success');
+            // console.log(doc);
+            // socket.write('data receive success');
           } else {
             console.log(err);
           }
@@ -42,8 +42,12 @@ var server = net.createServer(function(socket) {
     });
   });
   //监听连接断开事件
-  socket.on('end', function() {
-    console.log('Client disconnected.');
+  socket.on('end', function(err, msg) {
+    console.log('Client disconnected');
+  });
+  //
+  socket.on('error', function(err) {
+    console.log(err);
   });
 });
 //TCP服务器开始监听特定端口
