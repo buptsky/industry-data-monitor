@@ -5,51 +5,56 @@
       "eid": "001",
       "interval": "15",
       "updateTime": "1513836828165",
-      "data1": 32,
-      "data2": 32,
-      "data3": 32,
-      "data4": 32,
-      "data5": 32
+      "product1": "产品1",
+      "product1Data": 32,
+      "product2": "产品2",
+      "product2Data": 35,
+      "product3": "产品3",
+      "product3Data": 36
     },
     {
       "eid": "002",
       "interval": "15",
       "updateTime": "1513836828165",
-      "data1": 32,
-      "data2": 32,
-      "data3": 32,
-      "data4": 32,
-      "data5": 35
+      "product1": "产品1",
+      "product1Data": 32,
+      "product2": "产品2",
+      "product2Data": 35,
+      "product3": "产品3",
+      "product3Data": 36
     },
     {
       "eid": "003",
       "interval": "15",
       "updateTime": "1513836828165",
-      "data1": 32,
-      "data2": 32,
-      "data3": 32,
-      "data4": 32,
-      "data5": 39
+      "product1": "产品1",
+      "product1Data": 32,
+      "product2": "产品2",
+      "product2Data": 35,
+      "product3": "产品3",
+      "product3Data": 36
     },
     {
       "eid": "004",
       "interval": "15",
       "updateTime": "1513836828165",
-      "data1": 32,
-      "data2": 32,
-      "data3": 32,
-      "data4": 32,
-      "data5": 32
+      "product1": "产品1",
+      "product1Data": 32,
+      "product2": "产品2",
+      "product2Data": 35,
+      "product3": "产品3",
+      "product3Data": 36
     },
     {
       "eid": "005",
       "interval": "15",
       "updateTime": "1513836828165",
-      "data1": 32,
-      "data2": 32,
-      "data3": 32,
-      "data4": 32,
-      "data5": 32
+      "product1": "产品1",
+      "product1Data": 32,
+      "product2": "产品2",
+      "product2Data": 35,
+      "product3": "产品3",
+      "product3Data": 36
     }
   ],
   "errors": []

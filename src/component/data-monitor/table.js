@@ -5,11 +5,12 @@ const columns = [
   {title: '设备编号', width: 100, dataIndex: 'eid', fixed: 'left'},
   {title: '发送间隔', width: 100, dataIndex: 'interval'},
   {title: '更新时间', dataIndex: 'updateTime'},
-  {title: '数据1', dataIndex: 'data1'},
-  {title: '数据2', dataIndex: 'data2'},
-  {title: '数据3', dataIndex: 'data3'},
-  {title: '数据4', dataIndex: 'data4'},
-  {title: '数据5', dataIndex: 'data5'}
+  {title: '产品1名称', dataIndex: 'product1'},
+  {title: '产品1数据', dataIndex: 'product1Data'},
+  {title: '产品2名称', dataIndex: 'product2'},
+  {title: '产品2数据', dataIndex: 'product2Data'},
+  {title: '产品3名称', dataIndex: 'product3'},
+  {title: '产品3数据', dataIndex: 'product3Data'}
 ];
 
 class DataTable extends React.Component {

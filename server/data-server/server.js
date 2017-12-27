@@ -1,5 +1,6 @@
 const express = require('express');
-const equipment = require('./mongoose');
+const models = require('./model');
+const equipment = models.getModel('equipmentData');
 const app = express();
 app.use('/dist', express.static(`${__dirname}/dist`));
 app.get('/', (req, res) => {
@@ -7,18 +8,12 @@ app.get('/', (req, res) => {
   res.sendFile(`${__dirname}/index.html`);
 });
 app.get('/data/monitorData.do', (req, res) => {
-  const promises = [];
-  equipment.forEach((eq, index) => {
-    promises.push(eq.findOne({}, null, {sort: {'_id': -1}}).exec());
-  })
-  Promise.all([...promises]).then((data) => {
-    const ret =  data.filter(item => item); // 确保数据存在
+  equipment.find({}, function (err, doc) {
     res.json({
       status: 1,
-      data: ret,
+      data: doc,
       errors: []
     });
-    console.log(ret);
   });
 });
 app.listen(8000);
