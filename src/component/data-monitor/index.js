@@ -34,16 +34,8 @@ class DataMonitor extends React.Component {
   render() {
     return (
       <div style={{padding: 20}}>
-        <div style={{height: 36, lineHeight: '36px', fontSize: 16,marginBottom: 20, backgroundColor: '#0c60aa', color: '#fff', padding: '0 10px'}}>
-          查询所有设备最新状态
-          <Button
-            onClick={this.getData}
-            icon={'reload'}
-            size={'small'}
-            style={{marginLeft: 20}}
-          >
-             刷新
-          </Button>
+        <div style={{height: 36, lineHeight: '36px', fontSize: 16,marginBottom: 20, backgroundColor: '#0c60aa', color: '#fff', padding: '0 10px'}} >
+          所有设备最新状态
         </div>
         <DataTable dataSource={this.state.data} loading={this.state.loading}/>
       </div>

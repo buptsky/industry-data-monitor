@@ -1,6 +1,7 @@
 var net = require('net')    //引入网络模块
 const models = require('./model');
 const equipment = models.getModel('equipmentData');
+console.log(equipment);
 var HOST = '0.0.0.0';     //定义服务器地址
 var PORT = 9000;            //定义端口号
 console.info('Server is running on port ' + PORT);
