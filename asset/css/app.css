@@ -1,2 +1,17 @@
 @import '~antd/dist/antd.css';
+/*表格样式修正*/
+.report table {
+  border: 1px solid #ccc !important;
+}
 
+.ant-table-thead > tr > th {
+  text-align: center;
+  font-weight: 600 !important;
+  background-color: #0c60aa !important;
+  color: #fff !important;
+}
+
+.ant-table-bordered .ant-table-thead > tr > th, .ant-table-bordered .ant-table-tbody > tr > td {
+  border-right: 1px solid #ccc !important;
+  border-bottom: 1px solid #ccc !important;
+}
